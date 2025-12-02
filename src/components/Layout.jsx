@@ -3,6 +3,7 @@ import Navbar from './Navbar'
 import Hero from './Hero'
 import InfiniteMarquee from './InfiniteMarquee'
 import marqueeImages from '../assets/marquee'   // ← This is all you need!
+import PowCarousel_card from './powCarousel_card'
 const Layout = () => {
 
   return (
@@ -34,7 +35,8 @@ const Layout = () => {
                 <img src={img} loading='eager' alt={`Marquee Item: ${i}`} key={`Marquee item ${i}`} />
               ))}
           </InfiniteMarquee>
-
+      <div className='absolute  left-1/2 -translate-x-1/2  bg-[oklch(92.3%_0.003_48.717)] w-screen h-[2px]'></div>
+      <PowCarousel_card/>
         </div>
     </div>
 

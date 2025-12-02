@@ -29,6 +29,7 @@ const InfiniteMarquee = ({
 
   return (
     <div className={`relative overflow-hidden ${className} `}>
+      <div className='mb-5 text-center text-sm '>Trusted by fast-growing startups</div>
       <div className={marqueeClassNames} 
            style={{ '--duration': `${speed}s` }}>
         {marqueeItems}
@@ -52,6 +53,8 @@ const InfiniteMarquee = ({
         }}
         aria-hidden="true"
       />
+
+
     </div>
   );
 };
