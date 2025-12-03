@@ -4,6 +4,7 @@ import Hero from './Hero'
 import InfiniteMarquee from './InfiniteMarquee'
 import marqueeImages from '../assets/marquee'   // ← This is all you need!
 import PowCarousel_card from './powCarousel_card'
+import PowTagline from './powTagline'
 const Layout = () => {
 
   return (
@@ -36,7 +37,10 @@ const Layout = () => {
               ))}
           </InfiniteMarquee>
       <div className='absolute left-1/2 -translate-x-1/2  bg-[oklch(92.3%_0.003_48.717)] w-screen h-[2px]'></div>
-      <div className='relative overflow-hidden mt-12 h-[650px] '>
+              <div>
+          <PowTagline/>
+        </div>
+      <div className='relative overflow-hidden mt-8 h-[650px] '>
         <div className='absolute w-auto h-30 z-10 pointer-events-none inset-x-0 top-0' 
             style={{
               background: 'white',
@@ -45,8 +49,7 @@ const Layout = () => {
             }}
             aria-hidden="true"
         />
-        <PowCarousel_card
-        />
+        <PowCarousel_card/>
               <div className='absolute w-auto h-30 z-10 pointer-events-none inset-x-0 bottom-0'
             style={{
               background: 'white',

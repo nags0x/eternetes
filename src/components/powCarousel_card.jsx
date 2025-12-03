@@ -37,7 +37,7 @@ const PowCarousel_card = () => {
     )
   return (
     <>
-        <div className='my-4'>
+        <div className=''>
                     {/* console.log(data.name, data.title, data.message); */}
                         <div className='flex gap-4'>
                                 <div className='flex-1 animate-marquee-topBottom '>
