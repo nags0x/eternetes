@@ -1,9 +1,10 @@
-import React from 'react'
+import {useState} from 'react'
 import TaxesCard from './taxesCard';
 import AccountingCards from './accountingCards';
 import Toggle from './toggle';
 
 const Pricing = () => {
+  const [recievedState, setRecievedState] = useState(0);
   return (
     <>
               <div className='relative flex flex-col mt-20 mb-7 gap-2 justify-center items-center'>
@@ -14,13 +15,22 @@ const Pricing = () => {
                             Transparent and scales with features you use, not your expenses.
                     </div>
                       <div className='w-full lg:max-w-50 '>
-                      <Toggle/>
+                      <Toggle sendState={setRecievedState}/>
                     </div>
-                    <div className='mt-20'>
-                          <AccountingCards/>
-                    </div>
-
-                    
+                    {
+                      recievedState === 0 ? (
+                          <div className='mt-20'>
+                                <TaxesCard/>
+                                {console.log(recievedState)}
+                          </div>
+                      )
+                      : (
+                          <div className='mt-20'>
+                                <AccountingCards/>
+                                {console.log(recievedState)}
+                          </div>
+                      )
+                  }                    
       </div>
     </>
   )
