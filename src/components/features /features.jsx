@@ -67,7 +67,7 @@ const Features = () => {
   </div>
     
   <div className='flex flex-col w-full justify-center items-center gap-10 overflow-hidden'>
-    <div>
+    <div className='p-10'>
 <FeatCard/> 
     </div>
     
