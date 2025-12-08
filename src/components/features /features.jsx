@@ -89,15 +89,15 @@ const Features = () => {
 
 
   </div>
-        <div className='lg:text-4xl text-2xl [word-spacing:0.02em] flex flex-col gap-5 mt-30 font-[400] mx-30'>
-                <p>
+        <div className='lg:text-3xl text-2xl [word-spacing:0.02em] flex flex-col gap-5 mt-30 font-[400] mx-20'>
+                <p >
                 “Finta surfaces the exact numbers we need <br/>
                 in real‑time. I can check the dashboard any <br/>
                 day of the month, and it's ready.”
                 </p>
                 <div className='flex items-center gap-4'>
                 <div>
-                    <img src={steven} className='w-15 h-15 border rounded-full border-transparent' />
+                    <img src={steven} className='w-13 h-13 border rounded-full border-transparent' />
                 </div>
                 <div>
                         <div className='text-sm '>Zeno Rocha</div>

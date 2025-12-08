@@ -2,10 +2,11 @@ import React from 'react'
 import Navbar from './Navbar'
 import Hero from './Hero'
 import InfiniteMarquee from './InfiniteMarquee'
-import marqueeImages from '../assets/marquee'   // ← This is all you need!
+import marqueeImages from '../assets/marquee'  
 import PowCarousel_card from './powCarousel_card'
 import PowTagline from './powTagline'
 import Features from './features /features'
+import Pricing from './pricing/pricing'
 
 const Layout = () => {
 
@@ -61,8 +62,11 @@ const Layout = () => {
             aria-hidden="true"
         />
       </div>
-            <div className=''>
+            <div className='border border-x-0 border-t-0 pb-10 border-stone-200'>
           <Features/>
+            </div>
+            <div>
+              <Pricing/>
             </div>
       </div>
     </div>
