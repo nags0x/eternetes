@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { useNavigate } from "react-router-dom"
 import {
   Field,
   FieldDescription,
@@ -13,6 +14,10 @@ export function SignupForm({
   className,
   ...props
 }) {
+  const navigateObj = useNavigate();
+  function handleSignup(){
+    navigateObj('/auth');
+  }
   return (
     <form className={cn("flex flex-col gap-6", className)} {...props}>
       <FieldGroup>
@@ -47,7 +52,7 @@ export function SignupForm({
           <FieldDescription>Please confirm your password.</FieldDescription>
         </Field>
         <Field>
-          <Button type="submit">Create Account</Button>
+          <Button className='bg-white border-1 shadow-xs hover:bg-slate-100' type="submit">Create Account</Button>
         </Field>
         <FieldSeparator>Or continue with</FieldSeparator>
         <Field>
@@ -60,7 +65,8 @@ export function SignupForm({
             Sign up with GitHub
           </Button>
           <FieldDescription className="px-6 text-center">
-            Already have an account? <a href="#">Sign in</a>
+            <span>Already have an account? </span>
+            <button onClick={() => handleSignup()} className="underline decoration-dotted">Log in</button>
           </FieldDescription>
         </Field>
       </FieldGroup>

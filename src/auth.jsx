@@ -1,9 +1,7 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom';
 import { LoginForm } from './components/login-form';
 import AuthVideo from './assets/video-auth.mp4'
 import EternetesLogoLight from './assets/eternetes-logo-hero-dark.svg';
-import { SignupForm } from './components/signup-form';
 
  const Auth = () => {
 

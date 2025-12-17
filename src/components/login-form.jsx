@@ -20,7 +20,7 @@ export function LoginForm({
         navigateObj('/auth-signup');
     }
   return (
-    <form className={cn("flex flex-col gap-6 border-1 border-neutral-200 rounded-xl p-6 shadow-sm", className)} {...props}>
+    <form className={cn("flex flex-col gap-6 ", className)} {...props}>
       <FieldGroup>
         <div className="flex flex-col items-center gap-1 text-center">
           <h1 className="text-2xl font-semibold">Welcome to eternetes</h1>
@@ -30,7 +30,7 @@ export function LoginForm({
         </div>
         <Field>
           <FieldLabel htmlFor="email">Email</FieldLabel>
-          <Input id="email" type="email" placeholder="m@example.com" required />
+          <Input id="email" type="email" placeholder="x@example.com" required />
         </Field>
         <Field>
           <div className="flex items-center">
@@ -42,7 +42,7 @@ export function LoginForm({
           <Input id="password" type="password" required />
         </Field>
         <Field>
-          <Button type="submit">Login</Button>
+          <Button className='bg-white border-1 shadow-xs hover:bg-slate-100'  type="submit">Login</Button>
         </Field>
         <FieldSeparator>Or continue with</FieldSeparator>
         <Field>
