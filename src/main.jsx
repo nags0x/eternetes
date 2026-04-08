@@ -12,7 +12,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
          <Routes>
-              <Route path='/home' element={<Page />}/>
+              <Route path='/' element={<Page />}/>
               <Route path='/hacks' element={<Hack />} />
               <Route path='/auth' element={<Auth />} />
               <Route path='/auth-signup' element={<AuthSignup />} />
