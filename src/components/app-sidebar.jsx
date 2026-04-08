@@ -1,4 +1,6 @@
 import * as React from "react"
+import LogoLight from '../assets/eternetes-logo-hero-dark.svg'
+import { useNavigate } from "react-router-dom"
 import {
   IconCamera,
   IconChartBar,
@@ -33,8 +35,8 @@ import {
 
 const data = {
   user: {
-    name: "shadcn",
-    email: "m@example.com",
+    name: "nags",
+    email: "x@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
   navMain: [
@@ -151,16 +153,20 @@ const data = {
 export function AppSidebar({
   ...props
 }) {
+  const navigateObj = useNavigate();
+  function handleClickHack(){
+    navigateObj('/home');
+  }
   return (
     <Sidebar collapsible="offcanvas" {...props}>
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton asChild className="data-[slot=sidebar-menu-button]:!p-1.5">
-              <a href="#">
-                <IconInnerShadowTop className="!size-5" />
-                <span className="text-base font-semibold ">eternetes</span>
-              </a>
+              <button onClick={() => {handleClickHack()}}>
+                <img src={LogoLight} alt="eternetes_logo" className="size-5"/> 
+                <span className="text-base font-semibold">eternetes</span>
+              </button>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

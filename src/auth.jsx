@@ -2,18 +2,23 @@ import React from 'react'
 import { LoginForm } from './components/login-form';
 import AuthVideo from './assets/video-auth.mp4'
 import EternetesLogoLight from './assets/eternetes-logo-hero-dark.svg';
+import { useNavigate } from 'react-router-dom';
 
  const Auth = () => {
-
+    const navigateObj = useNavigate();
+    function handleImgClick(){
+        navigateObj('/home');
+    }
   return (
     <>
     <div className="grid min-h-svh lg:grid-cols-2">
       <div className="flex flex-col gap-4 p-6 md:p-10">
-        <div className="flex justify-center gap-2 md:justify-start">
+        <div className="flex justify-center gap-2 md:justify-start" onClick={() => {handleImgClick()}}>
           <a href="#" className="flex items-center gap-2 font-medium">
             <div className="flex size-8 items-center justify-center rounded-md">
                 <img 
                     src={EternetesLogoLight}
+                    
                 />
             </div>
             eternetes

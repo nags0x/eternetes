@@ -9,7 +9,10 @@ import {
 } from '@/components/ui/sidebar'
 import { DataTable } from './components/data-table'
 import data from "./data.json"
-
+// I need context regarding building backend/ all the folders and files and basic dependencies like jwt, bycrypt, mongo, cors etc needed for a fullstack application
+// I successfully completed the building the frontend for my full stack hackathon management opensource tool --- the react-router is also setup successfully, rn I just need
+// help me writing scalable backend, from setting up server folder to installing all the required dependencies
+// my codebase is react js no typescript and I need the backend according to the below my req for now would be mongodb and rest get me the best possible tech stack
 const Hack = () => {
     return(
         <SidebarProvider
@@ -19,7 +22,7 @@ const Hack = () => {
                     "--header-height": "calc(var(--spacing) * 12)",
                 }
             }>
-        <AppSidebar variant="inset" />
+            <AppSidebar variant="inset" />
             <SidebarInset>
                 <SiteHeader />
                 <div className="flex flex-1 flex-col">

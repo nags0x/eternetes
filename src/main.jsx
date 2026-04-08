@@ -6,6 +6,7 @@ import Page from './Page.jsx'
 import Hack from './hacks.jsx'
 import Auth from './auth'
 import AuthSignup from './auth-signup'
+import HackInfo from './hackInfo'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -15,6 +16,7 @@ createRoot(document.getElementById('root')).render(
               <Route path='/hacks' element={<Hack />} />
               <Route path='/auth' element={<Auth />} />
               <Route path='/auth-signup' element={<AuthSignup />} />
+              <Route path='/hackInfo' element={<HackInfo />} />
         </Routes>
     </BrowserRouter>
   </StrictMode>,
